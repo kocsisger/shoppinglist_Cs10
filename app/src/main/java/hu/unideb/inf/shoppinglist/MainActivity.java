@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TEXTVIEW_CONTENT = "TEXTVIEW_CONTENT";
     TextView itemsTextView;
-    private boolean listIsEmpty=true;
+    private boolean listIsEmpty = true;
 
     ActivityResultLauncher activityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
                 String item = activityResult.getData().getStringExtra(ItemsActivity.ITEM);
                 Log.d("ITEMS_TEST", item);
                 //if (listIsEmpty) {
-                if (itemsTextView.getText().toString().equals( getString(R.string.empty_list) )) {
+                if (itemsTextView.getText().toString().equals(getString(R.string.empty_list))) {
                     itemsTextView.setText("");
-                    listIsEmpty=false;
+                    listIsEmpty = false;
                 }
                 itemsTextView.append(item + "\n");
             }
@@ -56,12 +56,12 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences(sharedPrefFilename, MODE_PRIVATE);
 
         itemsTextView = findViewById(R.id.itemsTextView);
-        if (savedInstanceState!=null)
+        if (savedInstanceState != null)
             itemsTextView.setText(savedInstanceState.getString(TEXTVIEW_CONTENT));
-
-        itemsTextView.setText(
-            sharedPreferences.getString(TEXTVIEW_CONTENT, getString(R.string.empty_list))
-        );
+        else
+            itemsTextView.setText(
+                    sharedPreferences.getString(TEXTVIEW_CONTENT, getString(R.string.empty_list))
+            );
     }
 
     @Override
