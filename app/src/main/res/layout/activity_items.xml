@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="handleAddItem"
-            android:text="Banana"
+            android:text="@string/banana"
             android:textSize="24sp" />
 
         <Button
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="handleAddItem"
-            android:text="Candy"
+            android:text="@string/candy"
             android:textSize="24sp" />
 
         <Button
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="handleAddItem"
-            android:text="Donuts"
+            android:text="@string/donuts"
             android:textSize="24sp" />
 
         <Button
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="handleAddItem"
-            android:text="Pálinka"
+            android:text="@string/p_linka"
             android:textSize="24sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
